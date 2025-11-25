@@ -1,9 +1,15 @@
 public class selection_sort {
     public static void main(String[] args) {
+        int arr[]={5,1,1,2,0,0};
+        int a[]=name(arr);
+        for(int nums:a){
+            System.out.print(nums);
+        }
+    }
+    static int[] name(int arr[]){
 
-        int arr[]={3,5,2,1,7,6};
         int min=-1;
-        for(int i=0;i< arr.length-1;i++){
+        for(int i=0;i<arr.length-1;i++){
             min=i;
             for(int j=i+1;j< arr.length;j++){
                 if(arr[j]<arr[min]){
@@ -14,10 +20,6 @@ public class selection_sort {
             arr[i]=arr[min];
             arr[min]=temp;
         }
-
-        for(int nums: arr){
-            System.out.print(nums+ " ");
-
-        }
+        return arr;
     }
 }
